@@ -13,7 +13,7 @@ app.use("/auth", userRouter);
 app.use("/", hostelRouter);
 
 
-const port = 3050;
+const port = process.env.PORT ||  3000;
 app.listen(port, async () => {
   try {
     mongoose.connect(`mongodb+srv://faizan133:KTMduke390@cluster0.6bty07j.mongodb.net/?retryWrites=true&w=majority`, () => {
